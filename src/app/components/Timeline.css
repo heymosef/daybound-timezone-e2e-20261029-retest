@@ -1,0 +1,79 @@
+.timeline-viewport {
+  --dt-timeline-selection-bg: color-mix(in srgb, var(--dt-accent) 14%, var(--dt-bg));
+  --dt-timeline-selection-text: color-mix(in srgb, var(--dt-accent) 70%, var(--dt-text));
+}
+
+.timeline-viewport [data-selected] {
+  border-radius: 0.375em;
+}
+
+/* A drag belongs to the viewport; moving cells must not retrigger hover fills. */
+.timeline-viewport[data-scrubbing="true"] [data-timeline-cell] {
+  pointer-events: none;
+  transition: none;
+}
+
+/* Opaque, inverted theme colors stay distinct from day, night and selection fills. */
+.timeline-clock-change {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  border-left: 1px dashed var(--dt-text);
+  pointer-events: none;
+}
+
+.timeline-clock-change-label {
+  position: absolute;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 14px;
+  white-space: nowrap;
+  background: var(--dt-text);
+  color: var(--dt-bg);
+}
+
+/* Meet the 24px target minimum without covering the hour label above it. */
+.timeline-clock-change-hint {
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+  min-height: 24px;
+  padding: 0 4px 4px;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.timeline-clock-change-hint .timeline-clock-change-label {
+  position: static;
+}
+
+@media (min-width: 768px) {
+  .timeline-viewport [data-selected] { border-radius: 0; }
+  .timeline-viewport[data-first-row] [data-selected] { border-radius: 0.375em 0.375em 0 0; }
+  .timeline-viewport[data-last-row] [data-selected] { border-bottom-left-radius: 0.375em; border-bottom-right-radius: 0.375em; }
+}
+
+@media (forced-colors: active) {
+  .timeline-viewport {
+    --dt-timeline-selection-bg: Highlight;
+    --dt-timeline-selection-text: HighlightText;
+  }
+  .timeline-viewport [data-selected] { forced-color-adjust: none; }
+  .timeline-clock-change { border-color: CanvasText; }
+  .timeline-clock-change-label {
+    background: CanvasText;
+    color: Canvas;
+    forced-color-adjust: none;
+  }
+}

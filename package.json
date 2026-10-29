@@ -1,0 +1,53 @@
+{
+  "name": "daybound-web-app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --project tsconfig.json && tsc --project tsconfig.node.json",
+    "lint": "eslint . --max-warnings 0",
+    "tz:check": "node scripts/check-timezone-data.mjs",
+    "test:browser": "playwright test",
+    "typecheck:browser": "tsc --project tsconfig.node.json",
+    "tz:update": "node scripts/prepare-timezone-update.mjs",
+    "test:maintenance": "node --test scripts/test-timezone-*.mjs"
+  },
+  "dependencies": {
+    "@js-joda/core": "6.3.0",
+    "@js-joda/timezone": "3.1.0",
+    "clsx": "2.1.1",
+    "lucide-react": "0.487.0",
+    "motion": "12.23.24",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "3.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "1.64.1",
+    "@tailwindcss/vite": "4.1.12",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "4.7.0",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^16.0.0",
+    "jsdom": "^26.1.0",
+    "tailwindcss": "4.1.12",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.72.0",
+    "vite": "~6.4.5",
+    "vitest": "^4.1.12"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

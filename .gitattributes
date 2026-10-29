@@ -1,0 +1,2 @@
+# Preserve checksum-verified upstream license bytes, including original spacing/CRLF.
+public/fonts/*-OFL.txt -text -whitespace

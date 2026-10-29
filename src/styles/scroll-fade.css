@@ -1,0 +1,31 @@
+/* Mask content inside the frame so borders, shadows and the Today badge stay crisp. */
+.scroll-fade-x {
+  --scroll-fade-mask: linear-gradient(to right, transparent, #000 var(--scroll-fade-left, 0px), #000 calc(100% - var(--scroll-fade-right, 0px)), transparent);
+}
+
+.scroll-fade-y {
+  --scroll-fade-mask: linear-gradient(to bottom, transparent, #000 var(--scroll-fade-top, 0px), #000 calc(100% - var(--scroll-fade-bottom, 0px)), transparent);
+  /* Keep keyboard-highlighted combobox options clear of the fade when scrolled into view. */
+  scroll-padding-block: 16px;
+}
+
+.scroll-fade-x,
+.scroll-fade-y {
+  -webkit-mask-image: var(--scroll-fade-mask);
+  mask-image: var(--scroll-fade-mask);
+}
+
+/* Keep keyboard focus fully visible, including outlines at the scroll boundary. */
+.scroll-fade-x:has(:focus-visible),
+.scroll-fade-y:has(:focus-visible) {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+@media (forced-colors: active) {
+  .scroll-fade-x,
+  .scroll-fade-y {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

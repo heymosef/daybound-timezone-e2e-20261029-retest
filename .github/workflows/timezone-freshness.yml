@@ -1,0 +1,106 @@
+name: Check timezone freshness
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Generate and verify a candidate without creating a branch or PR
+        type: boolean
+        default: false
+      rebuild_current:
+        description: Exercise generation even when current (requires dry_run)
+        type: boolean
+        default: false
+  schedule:
+    - cron: '17 14 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: timezone-update
+  cancel-in-progress: false
+
+jobs:
+  timezone-freshness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      update: ${{ steps.plan.outputs.update }}
+      version: ${{ steps.plan.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Install pinned dependencies
+        run: npm ci
+      - name: Test maintenance automation offline
+        run: npm run test:maintenance
+      - name: Check IANA and deduplicate update PRs
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TZ_DRY_RUN: ${{ inputs.dry_run || false }}
+          TZ_REBUILD_CURRENT: ${{ inputs.rebuild_current || false }}
+        run: node scripts/plan-timezone-update.mjs
+      - name: Generate pinned IANA rules, aliases and independent regressions
+        if: steps.plan.outputs.update == 'true'
+        env:
+          TZ_UPDATE_VERSION: ${{ steps.plan.outputs.version }}
+          TZ_CANDIDATE_DIR: ${{ runner.temp }}/timezone-candidate
+        run: node scripts/prepare-timezone-update.mjs --version "$TZ_UPDATE_VERSION"
+      - name: Verify generated rules against independent IANA TZif oracle
+        if: steps.plan.outputs.update == 'true'
+        run: npm exec -- vitest run src/utils/timezoneRegressions.test.ts
+      - name: Save candidate data for isolated publishing job
+        if: steps.plan.outputs.update == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: timezone-candidate
+          path: ${{ runner.temp }}/timezone-candidate/
+          if-no-files-found: error
+          retention-days: 7
+
+  open-update-pr:
+    needs: timezone-freshness
+    if: >-
+      needs.timezone-freshness.outputs.update == 'true' &&
+      !inputs.dry_run && github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    steps:
+      - name: Checkout trusted workflow source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+      - name: Install pinned dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Download verified data only
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          name: timezone-candidate
+          path: ${{ runner.temp }}/timezone-candidate
+      - name: Open one timezone PR and dispatch full CI
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TZ_CANDIDATE_DIR: ${{ runner.temp }}/timezone-candidate
+          TZ_BASE_BRANCH: ${{ github.event.repository.default_branch }}
+          TZ_BASE_SHA: ${{ github.sha }}
+        run: node scripts/publish-timezone-update.mjs

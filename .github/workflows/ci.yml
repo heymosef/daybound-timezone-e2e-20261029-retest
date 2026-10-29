@@ -1,0 +1,73 @@
+name: Validate pull requests
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Test maintenance automation offline
+        run: npm run test:maintenance
+
+      - name: Install Chromium
+        run: npm exec -- playwright install --with-deps chromium
+
+      - name: Browser smoke
+        run: npm run test:browser
+
+      - name: Build
+        run: npm run build
+
+  timezone-handoff:
+    needs: validate
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+      startsWith(github.ref_name, 'automation/timezone-')) ||
+      (github.event_name == 'pull_request' &&
+      github.event.pull_request.user.login == 'github-actions[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      startsWith(github.head_ref, 'automation/timezone-'))
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Explicitly dispatch the trusted merge gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TZ_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: >-
+          gh workflow run timezone-auto-merge.yml
+          --repo "$GITHUB_REPOSITORY" --ref "$TZ_DEFAULT_BRANCH"
+          -f "ci_run_id=$GITHUB_RUN_ID" -F dry_run=false

@@ -1,0 +1,54 @@
+# IANA 2026e update
+
+Previous rules: 2026e. Generated with upstream builder dbdecb00b7fded90be6dcb09339f1bfbb8dc3101.
+
+Independent Python ZoneInfo/TZif regression samples: 1194.
+
+Changed offset/abbreviation zones and aliases: none.
+
+Added names: none. Removed names: none.
+
+Review release notes, changed zones, city mappings and existing legislative expectations before merging. Existing regressions are never rewritten automatically.
+
+Source: https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz
+
+## IANA release notes
+
+```text
+Release 2026e - 2026-09-29 17:14:38 -0700
+
+  Briefly:
+    Manitoba moves to permanent -05 on 2026-10-31.
+
+  Changes to future timestamps
+
+    Manitoba’s 2026-03-08 spring forward was its last foreseeable clock
+    change, as it moved to permanent -05 thereafter.  Model this with
+    its traditional abbreviation EST.  Although the change to
+    permanent -05 legally takes place on 2026-10-31, temporarily model
+    the change to occur on 2026-11-01 at 02:00 for the same reason as
+    other recent temporary hacks.  (Caution: see “NOTE FOR 2026b
+    TEMPORARY HACK FOR CLDR AND CANADA” below.)
+
+      As the change affects both America/Winnipeg and its backward
+      compatibility link, the obsolescent setting TZ="Canada/Central"
+      will now use the abbreviation EST for affected timestamps,
+      akin to TZ="Canada/Pacific" behavior introduced in 2026b.
+
+      Another TZDB release may be needed soon if any of the portions of
+      northwestern Ontario historically aligned with America/Winnipeg do
+      not follow.  For now, given the short leadtime with Manitoba’s
+      announcement, assume that they will, to avoid creating new zones
+      that may not be needed if no divergence occurs.
+
+  Changes to past timestamps
+
+    In 1925 Ireland fell back on 09-20 not 10-04 (thanks to Stan Ulbrych).
+
+  Changes to commentary
+
+    Discussion on timekeeping practices in northwestern Ontario has been
+    expanded in light of Manitoba’s recent announcement.  It is not yet
+    known whether or to what extent these areas may adapt their own
+    timekeeping practices in response.
+```

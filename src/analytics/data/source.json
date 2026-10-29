@@ -1,0 +1,8 @@
+{
+  "source": "https://download.geonames.org/export/dump/cities15000.zip",
+  "sha256": "6d9ec0783783fd382b632dc120a9e1d401020ac98552fc74d05f40e56ea719b2",
+  "records": 34179,
+  "license": "CC BY 4.0",
+  "generated_on": "2026-10-23",
+  "shards": 27
+}

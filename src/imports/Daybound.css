@@ -1,0 +1,11 @@
+/* A single, slow sunrise on entry; the final path and wordmark layout stay fixed. */
+@media (prefers-reduced-motion: no-preference) {
+  .daybound-sun {
+    animation: daybound-sunrise 1.6s cubic-bezier(0, 0, 0.2, 1) backwards;
+  }
+}
+
+@keyframes daybound-sunrise {
+  from { transform: translateY(28px); }
+  to { transform: translateY(0); }
+}

@@ -1,0 +1,822 @@
+{
+  "captured": "2026-10-23",
+  "baselineCssURL": "https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap",
+  "baselineCssSha256": "0dece9262609d2de10a16d11ff05543df789e36870b43bad8e2c31bbb7ee4298",
+  "families": {
+    "Geist Mono": {
+      "repository": "https://github.com/google/fonts",
+      "directory": "ofl/geistmono",
+      "commit": "9e25e2ba265e5298f70f6182dd4e8a3ebf1b9123",
+      "metadata": "name: \"Geist Mono\"\ndesigner: \"Andr\u00e9s Briganti, Mateo Zaragoza, Guillermo Rauch, Evil Rabbit, Jos\u00e9 Rago, Facundo Santana\"\nlicense: \"OFL\"\ncategory: \"MONOSPACE\"\ndate_added: \"2024-10-03\"\nfonts {\n  name: \"Geist Mono\"\n  style: \"normal\"\n  weight: 400\n  filename: \"GeistMono[wght].ttf\"\n  post_script_name: \"GeistMono-Regular\"\n  full_name: \"Geist Mono Regular\"\n  copyright: \"Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git)\"\n}\nfonts {\n  name: \"Geist Mono\"\n  style: \"italic\"\n  weight: 400\n  filename: \"GeistMono-Italic[wght].ttf\"\n  post_script_name: \"GeistMono-Italic\"\n  full_name: \"Geist Mono Italic\"\n  copyright: \"Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git)\"\n}\nsubsets: \"cyrillic\"\nsubsets: \"cyrillic-ext\"\nsubsets: \"latin\"\nsubsets: \"latin-ext\"\nsubsets: \"menu\"\nsubsets: \"symbols2\"\nsubsets: \"vietnamese\"\naxes {\n  tag: \"wght\"\n  min_value: 100.0\n  max_value: 900.0\n}\nsource {\n  repository_url: \"https://github.com/vercel/geist-font\"\n  commit: \"77f0563c03009d6c15c6342183fa53b352255b22\"\n  files {\n    source_file: \"fonts/GeistMono/variable/GeistMono[wght].ttf\"\n    dest_file: \"GeistMono[wght].ttf\"\n  }\n  files {\n    source_file: \"fonts/GeistMono/variable/GeistMono-Italic[wght].ttf\"\n    dest_file: \"GeistMono-Italic[wght].ttf\"\n  }\n  branch: \"main\"\n  config_yaml: \"sources/config-GeistMono.yaml\"\n}\nminisite_url: \"https://vercel.com/font\"\nprimary_script: \"Latn\"\nstroke: \"SANS_SERIF\"\nclassifications: \"MONOSPACE\"\n",
+      "license": "geistmono-OFL.txt",
+      "licenseSha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+    },
+    "Pixelify Sans": {
+      "repository": "https://github.com/google/fonts",
+      "directory": "ofl/pixelifysans",
+      "commit": "8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5",
+      "metadata": "name: \"Pixelify Sans\"\ndesigner: \"Stefie Justprince\"\nlicense: \"OFL\"\ncategory: \"DISPLAY\"\ndate_added: \"2023-09-13\"\nfonts {\n  name: \"Pixelify Sans\"\n  style: \"normal\"\n  weight: 400\n  filename: \"PixelifySans[wght].ttf\"\n  post_script_name: \"PixelifySans-Regular\"\n  full_name: \"Pixelify Sans Regular\"\n  copyright: \"Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)\"\n}\nsubsets: \"cyrillic\"\nsubsets: \"latin\"\nsubsets: \"latin-ext\"\nsubsets: \"menu\"\naxes {\n  tag: \"wght\"\n  min_value: 400.0\n  max_value: 700.0\n}\nsource {\n  repository_url: \"https://github.com/eifetx/Pixelify-Sans\"\n  commit: \"39df74aba80df8157546034b878e8be1eb565ced\"\n  files {\n    source_file: \"OFL.txt\"\n    dest_file: \"OFL.txt\"\n  }\n  files {\n    source_file: \"fonts/variable/PixelifySans[wght].ttf\"\n    dest_file: \"PixelifySans[wght].ttf\"\n  }\n  branch: \"main\"\n  config_yaml: \"sources/config.yaml\"\n}\nstroke: \"SANS_SERIF\"\nclassifications: \"DISPLAY\"\n",
+      "license": "pixelifysans-OFL.txt",
+      "licenseSha256": "b66ba46f511a851ab09998b5a5a9fdbb102545a3864cb993095e1745996873a7"
+    },
+    "Inter": {
+      "repository": "https://github.com/google/fonts",
+      "directory": "ofl/inter",
+      "commit": "0b58fb370093f9a9f4ff785d94405710b79de67c",
+      "metadata": "name: \"Inter\"\ndesigner: \"Rasmus Andersson\"\nlicense: \"OFL\"\ncategory: \"SANS_SERIF\"\ndate_added: \"2020-01-24\"\nfonts {\n  name: \"Inter\"\n  style: \"normal\"\n  weight: 400\n  filename: \"Inter[opsz,wght].ttf\"\n  post_script_name: \"Inter-Regular\"\n  full_name: \"Inter Regular\"\n  copyright: \"Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)\"\n}\nfonts {\n  name: \"Inter\"\n  style: \"italic\"\n  weight: 400\n  filename: \"Inter-Italic[opsz,wght].ttf\"\n  post_script_name: \"Inter-Italic\"\n  full_name: \"Inter Italic\"\n  copyright: \"Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)\"\n}\nsubsets: \"cyrillic\"\nsubsets: \"cyrillic-ext\"\nsubsets: \"greek\"\nsubsets: \"greek-ext\"\nsubsets: \"latin\"\nsubsets: \"latin-ext\"\nsubsets: \"menu\"\nsubsets: \"vietnamese\"\naxes {\n  tag: \"opsz\"\n  min_value: 14.0\n  max_value: 32.0\n}\naxes {\n  tag: \"wght\"\n  min_value: 100.0\n  max_value: 900.0\n}\nsource {\n  repository_url: \"https://www.github.com/rsms/inter\"\n  commit: \"66647c0bbbe41a850d79d9c76fb13add3378940f\"\n  archive_url: \"https://github.com/rsms/inter/files/15438431/Inter-4.1-GoogleFonts.zip\"\n  files {\n    source_file: \"Inter[opsz,wght].ttf\"\n    dest_file: \"Inter[opsz,wght].ttf\"\n  }\n  files {\n    source_file: \"Inter-Italic[opsz,wght].ttf\"\n    dest_file: \"Inter-Italic[opsz,wght].ttf\"\n  }\n  branch: \"master\"\n}\nminisite_url: \"https://rsms.me/inter\"\n",
+      "license": "inter-OFL.txt",
+      "licenseSha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    }
+  },
+  "files": [
+    {
+      "family": "Geist Mono",
+      "subset": "cyrillic-ext",
+      "file": "geist-mono-cyrillic-ext.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrodmhHkjkotbA.woff2",
+      "distributionVersion": "6",
+      "weight": "100 900",
+      "unicodeRange": "U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+      "bytes": 6204,
+      "sha256": "e27f657e38d52887baa3b6b2f812bef93dfdd356f0810e40edd4ee284cc7e9f6",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.701",
+        "family": "Geist Mono",
+        "glyphCount": 52,
+        "codepointCount": 40,
+        "cmapSha256": "504ba9f5ba21c4fa146df557ed8e16dd7ff58e544839a6f877869e48ebe6ae38",
+        "codepointRanges": [
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C1",
+          "U+0102",
+          "U+0462-0463",
+          "U+046A-046B",
+          "U+0472-0475",
+          "U+0492-0493",
+          "U+0496-0497",
+          "U+049A-049B",
+          "U+04A2-04A3",
+          "U+04AE-04AF",
+          "U+04B2-04B3",
+          "U+04B6-04B7",
+          "U+04BA-04BB",
+          "U+04C0",
+          "U+04CF",
+          "U+04D8-04D9",
+          "U+04E2-04E3",
+          "U+04E8-04E9",
+          "U+04EE-04EF",
+          "U+20B4"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Geist Mono",
+      "subset": "cyrillic",
+      "file": "geist-mono-cyrillic.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrMdmhHkjkotbA.woff2",
+      "distributionVersion": "6",
+      "weight": "100 900",
+      "unicodeRange": "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+      "bytes": 12872,
+      "sha256": "75b3bedbebc35f347c0ae3b416aa871941555357e7b0f83767eb5987875589ed",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.701",
+        "family": "Geist Mono",
+        "glyphCount": 137,
+        "codepointCount": 107,
+        "cmapSha256": "256a022b7bff15c744221bbc8ec3fdf828b78976700377040c5dce168d0c0f41",
+        "codepointRanges": [
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C1",
+          "U+0102",
+          "U+0301",
+          "U+0400-045F",
+          "U+0490-0491",
+          "U+04B0-04B1",
+          "U+2116"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Geist Mono",
+      "subset": "symbols2",
+      "file": "geist-mono-symbols2.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFg08vz7MhEIVVeA.woff2",
+      "distributionVersion": "6",
+      "weight": "100 900",
+      "unicodeRange": "U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F",
+      "bytes": 5892,
+      "sha256": "d67e4a94ba498635f764ddca7d1ec4271f5642f032eb24b426764480f66f8497",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.701",
+        "family": "Geist Mono",
+        "glyphCount": 168,
+        "codepointCount": 165,
+        "cmapSha256": "4331a7cd8c89e6cefc6a1faf69842278d8c6e2c704f6bba182b101cd93374f18",
+        "codepointRanges": [
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C1",
+          "U+0102",
+          "U+2500-259F"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Geist Mono",
+      "subset": "vietnamese",
+      "file": "geist-mono-vietnamese.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrgdmhHkjkotbA.woff2",
+      "distributionVersion": "6",
+      "weight": "100 900",
+      "unicodeRange": "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB",
+      "bytes": 7728,
+      "sha256": "16e1d48b6dd29eb240aec5db36184eb182933c082cd43de7f35af686d58087d2",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.701",
+        "family": "Geist Mono",
+        "glyphCount": 141,
+        "codepointCount": 113,
+        "cmapSha256": "18c014754de35c486e78ebae79822deb1c8c8cc81a35b6b06d6fb39e923a111c",
+        "codepointRanges": [
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C1",
+          "U+0102-0103",
+          "U+0110-0111",
+          "U+0128-0129",
+          "U+0168-0169",
+          "U+01A0-01A1",
+          "U+01AF-01B0",
+          "U+0300-0301",
+          "U+0303-0304",
+          "U+0308-0309",
+          "U+0323",
+          "U+1EA0-1EF9"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Geist Mono",
+      "subset": "latin-ext",
+      "file": "geist-mono-latin-ext.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrkdmhHkjkotbA.woff2",
+      "distributionVersion": "6",
+      "weight": "100 900",
+      "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "bytes": 14712,
+      "sha256": "745994b5cd950ec201b66526375f057d540847cccfc70f4f24f5f571d26d3923",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.701",
+        "family": "Geist Mono",
+        "glyphCount": 232,
+        "codepointCount": 173,
+        "cmapSha256": "fecbab74b12d53bec8fde53e6ff5947ee9cdd35a1e5835a1d210ffa3726110c7",
+        "codepointRanges": [
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C1",
+          "U+0100-0113",
+          "U+0116-012B",
+          "U+012E-0130",
+          "U+0134-0137",
+          "U+0139-013E",
+          "U+0141-0148",
+          "U+014A-014D",
+          "U+0150-0151",
+          "U+0154-017E",
+          "U+018F",
+          "U+0192",
+          "U+01A0-01A1",
+          "U+01AF-01B0",
+          "U+01CD-01CE",
+          "U+01E4-01E9",
+          "U+0218-021B",
+          "U+0237",
+          "U+0259",
+          "U+02B9",
+          "U+02BC",
+          "U+02C7-02C8",
+          "U+02DD",
+          "U+0300-0301",
+          "U+0303-0304",
+          "U+0308-0309",
+          "U+0323",
+          "U+1E20-1E21",
+          "U+1E80-1E85",
+          "U+1E9E",
+          "U+1EF2-1EF9",
+          "U+2020",
+          "U+20AA",
+          "U+20B1",
+          "U+20B4",
+          "U+20B9",
+          "U+20BD",
+          "U+A78B-A78C"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Geist Mono",
+      "subset": "latin",
+      "file": "geist-mono-latin.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/geistmono/v6/or3nQ6H-1_WfwkMZI_qYFrcdmhHkjko.woff2",
+      "distributionVersion": "6",
+      "weight": "100 900",
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "bytes": 23108,
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.701",
+        "family": "Geist Mono",
+        "glyphCount": 264,
+        "codepointCount": 225,
+        "cmapSha256": "78d1f1b73b4d01ff21fdc677e98557f084919bc259016a5843e16462659de85c",
+        "codepointRanges": [
+          "U+0020-007E",
+          "U+00A0-00AC",
+          "U+00AE-00FF",
+          "U+0102",
+          "U+0131",
+          "U+0152-0153",
+          "U+02BC",
+          "U+02C6",
+          "U+02DA",
+          "U+02DC",
+          "U+0300-0301",
+          "U+0303-0304",
+          "U+0308-0309",
+          "U+0323",
+          "U+2013-2014",
+          "U+2018-201A",
+          "U+201C-201E",
+          "U+2022",
+          "U+2026",
+          "U+2032-2033",
+          "U+2039-203A",
+          "U+2044",
+          "U+20AC",
+          "U+2122",
+          "U+2191",
+          "U+2193",
+          "U+2212"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Inter",
+      "subset": "cyrillic-ext",
+      "file": "inter-cyrillic-ext.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2",
+      "distributionVersion": "20",
+      "weight": "100 900",
+      "unicodeRange": "U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+      "bytes": 25844,
+      "sha256": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 4.001;git-66647c0bb",
+        "family": "Inter",
+        "glyphCount": 224,
+        "codepointCount": 157,
+        "cmapSha256": "72b556df6f5ccd165ab7d5bcf22e63ae699df535e331d41958e24335f2a824f7",
+        "codepointRanges": [
+          "U+0000",
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C4",
+          "U+0460-0479",
+          "U+0480-048F",
+          "U+0492-049D",
+          "U+04A0-04AF",
+          "U+04B2-04FF",
+          "U+052F",
+          "U+20B4",
+          "U+2DFF",
+          "U+A69F"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Inter",
+      "subset": "cyrillic",
+      "file": "inter-cyrillic.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2",
+      "distributionVersion": "20",
+      "weight": "100 900",
+      "unicodeRange": "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+      "bytes": 18744,
+      "sha256": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 4.001;git-66647c0bb",
+        "family": "Inter",
+        "glyphCount": 153,
+        "codepointCount": 107,
+        "cmapSha256": "9d808b7e5f65f77a3a5d011275692b3b8d6f718d80860c5eaf36e332bfd4c5d0",
+        "codepointRanges": [
+          "U+0000",
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C4",
+          "U+0301",
+          "U+0400-045F",
+          "U+0490-0491",
+          "U+04B0-04B1",
+          "U+2116"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Inter",
+      "subset": "greek-ext",
+      "file": "inter-greek-ext.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2",
+      "distributionVersion": "20",
+      "weight": "100 900",
+      "unicodeRange": "U+1F00-1FFF",
+      "bytes": 11272,
+      "sha256": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 4.001;git-66647c0bb",
+        "family": "Inter",
+        "glyphCount": 263,
+        "codepointCount": 238,
+        "cmapSha256": "47941e7899baeb506d7a67d4db1e25881d638101f6697d599e3eb600bf537e40",
+        "codepointRanges": [
+          "U+0000",
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C4",
+          "U+1F00-1F15",
+          "U+1F18-1F1D",
+          "U+1F20-1F45",
+          "U+1F48-1F4D",
+          "U+1F50-1F57",
+          "U+1F59",
+          "U+1F5B",
+          "U+1F5D",
+          "U+1F5F-1F7D",
+          "U+1F80-1FB4",
+          "U+1FB6-1FC4",
+          "U+1FC6-1FD3",
+          "U+1FD6-1FDB",
+          "U+1FDD-1FEF",
+          "U+1FF2-1FF4",
+          "U+1FF6-1FFE"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Inter",
+      "subset": "greek",
+      "file": "inter-greek.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2",
+      "distributionVersion": "20",
+      "weight": "100 900",
+      "unicodeRange": "U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF",
+      "bytes": 19044,
+      "sha256": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 4.001;git-66647c0bb",
+        "family": "Inter",
+        "glyphCount": 144,
+        "codepointCount": 110,
+        "cmapSha256": "f2fdeabc8cf1132981231647c89075ce924396d1f7811ee6b0e5e22bf735d046",
+        "codepointRanges": [
+          "U+0000",
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C4",
+          "U+0374-0376",
+          "U+037A-037F",
+          "U+0384-038A",
+          "U+038C",
+          "U+038E-03A1",
+          "U+03A3-03D7",
+          "U+03DC-03DD",
+          "U+03F0-03F6",
+          "U+03F9-03FA",
+          "U+03FC-03FF"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Inter",
+      "subset": "vietnamese",
+      "file": "inter-vietnamese.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2",
+      "distributionVersion": "20",
+      "weight": "100 900",
+      "unicodeRange": "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB",
+      "bytes": 10280,
+      "sha256": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 4.001;git-66647c0bb",
+        "family": "Inter",
+        "glyphCount": 152,
+        "codepointCount": 115,
+        "cmapSha256": "de87f7247d1b6ed3642064d2fa536ea579168c5d5cd794e949ec046ec7d84b50",
+        "codepointRanges": [
+          "U+0000",
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C4",
+          "U+0102-0103",
+          "U+0110-0111",
+          "U+0128-0129",
+          "U+0168-0169",
+          "U+01A0-01A1",
+          "U+01AF-01B0",
+          "U+0300-0301",
+          "U+0303-0304",
+          "U+0308-0309",
+          "U+0323",
+          "U+1EA0-1EF9",
+          "U+20AB"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Inter",
+      "subset": "latin-ext",
+      "file": "inter-latin-ext.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2",
+      "distributionVersion": "20",
+      "weight": "100 900",
+      "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "bytes": 85272,
+      "sha256": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 4.001;git-66647c0bb",
+        "family": "Inter",
+        "glyphCount": 879,
+        "codepointCount": 733,
+        "cmapSha256": "d7f6250dff04b6d6c71d2d12debf9d9c634497657ba3f5356a4d144e0dd69755",
+        "codepointRanges": [
+          "U+0000",
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C4",
+          "U+0100-0130",
+          "U+0132-0148",
+          "U+014A-0151",
+          "U+0154-01C3",
+          "U+01C5-0254",
+          "U+0256-027B",
+          "U+027E-0284",
+          "U+0286-0290",
+          "U+0292-02A4",
+          "U+02A6-02BA",
+          "U+02BC-02C5",
+          "U+02C7-02CC",
+          "U+02CE-02D7",
+          "U+02DD-0301",
+          "U+0303-0304",
+          "U+0308-0309",
+          "U+0323",
+          "U+1D00",
+          "U+1D0D",
+          "U+1D1B",
+          "U+1D43",
+          "U+1D47-1D49",
+          "U+1D4D",
+          "U+1D4F-1D50",
+          "U+1D52",
+          "U+1D56-1D58",
+          "U+1D5B",
+          "U+1D62-1D65",
+          "U+1D9C",
+          "U+1DA0",
+          "U+1DBB",
+          "U+1DBF",
+          "U+1E00-1E9B",
+          "U+1E9D-1E9F",
+          "U+1EF2-1EFF",
+          "U+2020",
+          "U+20A0-20AB",
+          "U+20AD-20AF",
+          "U+20B1-20B5",
+          "U+20B8-20BA",
+          "U+20BC-20BF",
+          "U+2113",
+          "U+2C7C",
+          "U+2C7F",
+          "U+A7FF"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Inter",
+      "subset": "latin",
+      "file": "inter-latin.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+      "distributionVersion": "20",
+      "weight": "100 900",
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "bytes": 48432,
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 4.001;git-66647c0bb",
+        "family": "Inter",
+        "glyphCount": 518,
+        "codepointCount": 230,
+        "cmapSha256": "f47eea83eadf7855c885c65456549d9bfc04b127874dbbc5c9591588cf38b597",
+        "codepointRanges": [
+          "U+0000",
+          "U+0020-007E",
+          "U+00A0-00AC",
+          "U+00AE-00FF",
+          "U+0131",
+          "U+0152-0153",
+          "U+02BB-02BC",
+          "U+02C6",
+          "U+02DA",
+          "U+02DC",
+          "U+0300-0301",
+          "U+0303-0304",
+          "U+0308-0309",
+          "U+0323",
+          "U+2002",
+          "U+2009",
+          "U+200B",
+          "U+2013-2014",
+          "U+2018-201A",
+          "U+201C-201E",
+          "U+2022",
+          "U+2026",
+          "U+2032-2033",
+          "U+2039-203A",
+          "U+2044",
+          "U+20AC",
+          "U+2122",
+          "U+2191",
+          "U+2193",
+          "U+2212",
+          "U+FEFF"
+        ],
+        "axes": {
+          "wght": [
+            100.0,
+            400.0,
+            900.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Pixelify Sans",
+      "subset": "cyrillic",
+      "file": "pixelify-sans-cyrillic.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/pixelifysans/v3/CHylV-3HFUT7aC4iv1TxGDR9JnkEi0tSaJ1f2A.woff2",
+      "distributionVersion": "3",
+      "weight": "400 700",
+      "unicodeRange": "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+      "bytes": 5032,
+      "sha256": "0276a1c025cd6c8b4f4543859fcefdff632de70d2b1284fd57d674c1d31b4010",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.000",
+        "family": "Pixelify Sans",
+        "glyphCount": 100,
+        "codepointCount": 98,
+        "cmapSha256": "786911ef0da8ce8aa0c0e99876ee647a16579dbc72ee4be8736452d25431980d",
+        "codepointRanges": [
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C1",
+          "U+0102",
+          "U+0301",
+          "U+0401-0405",
+          "U+0407-040C",
+          "U+040E-041D",
+          "U+0420-044F",
+          "U+0451-045C",
+          "U+045E-045F",
+          "U+0490-0491",
+          "U+2116"
+        ],
+        "axes": {
+          "wght": [
+            400.0,
+            400.0,
+            700.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Pixelify Sans",
+      "subset": "latin-ext",
+      "file": "pixelify-sans-latin-ext.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/pixelifysans/v3/CHylV-3HFUT7aC4iv1TxGDR9JnMEi0tSaJ1f2A.woff2",
+      "distributionVersion": "3",
+      "weight": "400 700",
+      "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "bytes": 8236,
+      "sha256": "c508fbb0fcf9944e706cb9895c71fcdbc9ddc75d75af369f9f0af8becd550786",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.000",
+        "family": "Pixelify Sans",
+        "glyphCount": 214,
+        "codepointCount": 158,
+        "cmapSha256": "56e2532bad672c3b3f63d3e7ec0a82a7724a38778dfeb96ba31158cba06927e6",
+        "codepointRanges": [
+          "U+0020",
+          "U+0041",
+          "U+00A0",
+          "U+00C1",
+          "U+0100-0130",
+          "U+0132-0137",
+          "U+0139-0151",
+          "U+0154-017E",
+          "U+0192",
+          "U+01FC-01FF",
+          "U+0218-021B",
+          "U+0237",
+          "U+02C7",
+          "U+02DD",
+          "U+0300-0301",
+          "U+0303-0304",
+          "U+0308",
+          "U+1E80-1E85",
+          "U+1E9E",
+          "U+1EF2-1EF3",
+          "U+2020",
+          "U+20A1",
+          "U+20A3-20A4",
+          "U+20A7"
+        ],
+        "axes": {
+          "wght": [
+            400.0,
+            400.0,
+            700.0
+          ]
+        }
+      }
+    },
+    {
+      "family": "Pixelify Sans",
+      "subset": "latin",
+      "file": "pixelify-sans-latin.woff2",
+      "sourceURL": "https://fonts.gstatic.com/s/pixelifysans/v3/CHylV-3HFUT7aC4iv1TxGDR9Jn0Ei0tSaJ0.woff2",
+      "distributionVersion": "3",
+      "weight": "400 700",
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "bytes": 12008,
+      "sha256": "0f2216c1b7bf13b775e7b825c15e1c8414f3899cbd4120f275cdc96001a053a0",
+      "metadata": {
+        "tool": "fontTools4.60.2; Brotli1.2.1",
+        "version": "Version 1.000",
+        "family": "Pixelify Sans",
+        "glyphCount": 239,
+        "codepointCount": 217,
+        "cmapSha256": "f6d3d241a856a4e436aaea2a91314583b25c1728d199db75b614b4cede45f0b0",
+        "codepointRanges": [
+          "U+0020-007E",
+          "U+00A0-00A5",
+          "U+00A7-00AC",
+          "U+00AE-00FF",
+          "U+0102",
+          "U+0131",
+          "U+0152-0153",
+          "U+02C6",
+          "U+02DA",
+          "U+02DC",
+          "U+0300-0301",
+          "U+0303-0304",
+          "U+0308",
+          "U+2013-2014",
+          "U+2018-201A",
+          "U+201C-201E",
+          "U+2022",
+          "U+2026",
+          "U+2039-203A",
+          "U+20AC",
+          "U+2122",
+          "U+2212",
+          "U+2215"
+        ],
+        "axes": {
+          "wght": [
+            400.0,
+            400.0,
+            700.0
+          ]
+        }
+      }
+    }
+  ]
+}
